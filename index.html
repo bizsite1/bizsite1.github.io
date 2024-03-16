@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#upgrade-guide">Upgrade Guide</a></li>
+            <li><a href="#getting-started"></a>
+            <li><a href="#setup-homepage">Setup homepage</a></li>
+            <li><a href="#setup-menus">Setup menus</a></li>
+            <li><a href="#setup-theme-options">Setup theme options</a></li>
+            <li><a href="#widgets">Widgets</a></li>
+            <li><a href="#custom-css-js">Custom CSS/JS</a></li>
+            <li><a href="#translation">Translation</a></li>
+            <li><a href="#multi-language">Multi-language</a></li>
+            <li><a href="#currencies">Currencies</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#media-setup-amazon-s3">Media - Setup Amazon S3</a></li>
+            <li><a href="#media-setup-bunnycdn">Media - Setup BunnyCDN</a></li>
+            <li><a href="#media-setup-wasabi">Media - Setup Wasabi</a></li>
+            <li><a href="#setup-email">Setup email</a></li>
+            <li><a href="#invoice-template">Invoice template</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section id="overview">
+            <h1>BizSite - Laravel Multipurpose Agency</h1>
+            <h2>Introduction</h2>
+            <p>
+                BizSite is a Laravel Multipurpose Agency script utilizing Laravel 10.x. It's a product built on Botble CMS.
+            </p>
+            <p>
+                <strong>Created:</strong> jan 05, 2024<br>
+                <strong>By:</strong> TanXor Team<br>
+                <strong>Email:</strong> contact@tanxor.com
+            </p>
+            <p>
+                Thank you for purchasing this product. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="#">here</a> for quick support. Thank you so much!
+            </p>
+            
+            <h2>Demo</h2>
+            <p>
+                <strong>Homepage:</strong> <a href="https://bizdemosite.tanxor.com/">https://bizdemosite.tanxor.com/</a><br>
+                <strong>Admin Area:</strong> <a href="https://bizdemosite.tanxor.com/admin">https://bizdemosite.tanxor.com/admin</a><br>
+                <strong>Username:</strong> demo<br>
+                <strong>Password:</strong> demo123
+            </p>
+            
+            <h2>Features</h2>
+            <ul>
+                <li>Fully Ecommerce features: product catalogs, product attributes, product variations, product collections, discounts, shipping…</li>
+                <li>Sell Simple or Variable Products</li>
+                <li>Built-in Order Tracking page</li>
+                <li>Unlimited Categories & Sub-Categories</li>
+                <li>Filter Products (e.g: by size, color, brands, categories, etc.)</li>
+                <li>Optional Wishlist & Compare</li>
+                <li>Product Deals</li>
+                <li>Gallery lightbox for product images</li>
+                <li>Product Image Zoom</li>
+                <li>Color, Label, and Image Swatches</li>
+                <li>Product Quick View</li>
+                <li>Frequently Bought Together</li>
+                <li>Advanced Typography</li>
+                <li>Single checkout page</li>
+                <li>Support many payment methods: PayPal, Stripe, Paystack, Razorpay, Mollie and SSLCommerz.</li>
+                <li>Guest checkout supported.</li>
+                <li>Multi-language, unlimited languages support.</li>
+                <li>Multi-currency, unlimited currencies support.</li>
+                <li>Full RTL support.</li>
+                <li>Page, blog, menu, contact, newsletter, slider… modules are provided with the use of components to avoid boilerplate code.</li>
+                <li>Powerful media system, also support Amazon S3, DigitalOcean Spaces</li>
+                <li>SEO & sitemap support: access sitemap.xml to see more.</li>
+                <li>Google Analytics: display analytics data in admin panel.</li>
+                <li>Translation tool: easy to translate front theme and admin panel to your language.</li>
+                <li>Beautiful theme is ready to use.</li>
+                <li>Powerful Permission System: Manage user, team, role by permissions. Easy to manage user by permissions.</li>
+                <li>Admin template comes with color schemes to match your taste.</li>
+                <li>Fully Responsive: Compatible with all screen resolutions.</li>
+                <li>Coding Standard: All code follows coding standards PSR-12 and best practices.</li>
+            </ul>
+        </section>
+        
+
+        <section id="upgrade-guide">
+            <h1>Upgrade Guide</h1>
+            <p>
+                This guide will walk you through the process of upgrading Botble CMS based products. There are two ways to upgrade your product:
+            </p>
+            
+            <h2>Automatic Update</h2>
+            <p>
+                To update your product automatically, follow these steps:
+            </p>
+            <ol>
+                <li>Log in to your admin panel.</li>
+                <li>Go to Platform Administration -> System Updater.</li>
+                <li>If there is a new version available, you will see a Download & Install Update button. Click on it to start the automatic update process.</li>
+            </ol>
+            <!-- <img src="automatic-update.png" alt="Automatic Update"> -->
+            <img src="img/1.png" alt="Automatic Update" width="800" height="400">
+            
+            <h2>Manual Update</h2>
+            <p>
+                This way is a bit more complex, but it gives you more control over the upgrade process. Here are the steps:
+            </p>
+            <ol>
+                <li>Download the latest version of the product from CodeCanyon.</li>
+                <li>Extract the downloaded file.</li>
+                <li>Upload the extracted files to your server, overwrite the following directories and files:
+                    <ul>
+                        <li>app</li>
+                        <li>database</li>
+                        <li>config</li>
+                        <li>platform</li>
+                        <li>public/themes</li>
+                        <li>public/vendor</li>
+                        <li>bootstrap</li>
+                        <li>vendor</li>
+                        <li>composer.json</li>
+                        <li>composer.lock</li>
+                        <li>public/index.php</li>
+                    </ul>
+                </li>
+                <li>Clear the cache by navigating to Platform Administration -> Cache Management and clicking on the Clear all CMS cache button.</li>
+                <img src="img/2.png" alt="Manual Update" width="1000" height="400">
+                <li>Deactivate all plugins by going to Plugins -> Installed Plugins, and then activate them again.</li>
+                <li>Update the translations by going to Settings -> Localization -> Other Translations and click to the here link to update the translations.</li>
+                <img src="img/3.png" alt="Manual Update" width="1000" height="300">
+            </ol>
+    
+        </section>
+        
+        <section id="installation">
+            <h1>Installation</h1>
+            
+            <h2>Requirements</h2>
+            <p>
+                Before installing our script, ensure that your server meets the following requirements:
+            </p>
+            <ul>
+                <li>Apache, nginx, or another compatible web server</li>
+                <li>PHP >= 8.1 or higher</li>
+                <li>MySQL Database server</li>
+                <li>PDO PHP extension</li>
+                <li>OpenSSL PHP extension</li>
+                <li>mbstring PHP extension</li>
+                <li>exif PHP extension</li>
+                <li>fileinfo PHP extension</li>
+                <li>xml PHP extension</li>
+                <li>Ctype PHP extension</li>
+                <li>JSON PHP extension</li>
+                <li>Tokenizer PHP extension</li>
+                <li>cURL PHP extension</li>
+                <li>zip PHP extension</li>
+                <li>iconv PHP extension</li>
+                <li>Ensure the mod_rewrite Apache module is enabled</li>
+            </ul>
+            <p><strong>PHP Configuration:</strong><br>
+                Open your php configuration file php.ini and change the following settings.<br>
+                <code>
+                    memory_limit = 256M<br>
+                    max_execution_time = 300
+                </code>
+            </p>
+            <p>
+                If you are using cPanel, you can follow <a href="#">this article</a> to change your PHP memory limit settings.
+            </p>
+            <p><strong>TIP:</strong><br>
+                On this project, we're using the Laravel 10.x. Please go to Laravel documentation page for more information.
+            </p>
+            
+            <h2>Installation</h2>
+            
+            <h3>Install with our Installer UI</h3>
+            <p>Watch the video tutorial to see how to install our script with the installer UI:</p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/iam99NkUIu0"> 
+      </iframe>
+            <!-- <video src="https://youtu.be/iam99NkUIu0" controls></video> -->
+            <p>
+                You can install our script with our installer UI by following these steps:
+            </p>
+            <ol>
+                <li>Create database and extract source codes into your web root directory.</li>
+                <li>Go to [your-domain.com] to start installation.</li>
+                <li>Step by step to set up your database connection, site information and administrator.</li>
+                <li>Login and set up your website on Welcome Board.</li>
+            </ol>
+            
+            <h3>Manually</h3>
+            <p>Watch the video tutorial to see how to install our script manually:</p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/zFbWYpjuFJk">
+      </iframe>
+            <!-- <video src="manual-installation-tutorial.mp4" controls></video> -->
+            <p>
+                You can install our script manually by following these steps:
+            </p>
+            <ol>
+                <li>Upload all files into the root folder of your hosting (normally, it is public_html).</li>
+                <li>Create a database and import data from database.sql (it's located in source code).</li>
+                <img src="img/4.png" alt="Manual Update" width="900" height="600">
+                <li>Update your database credentials and APP_URL in .env.</li>
+                <img src="img/5.png" alt="Manual Update" width="740" height="470">
+                <li>Go to /admin to access to admin panel.<br>
+                    The default admin account is admin - 12345678.</li>
+                    <img src="img/6.png" alt="Manual Update" width="730" height="460">
+            </ol>
+            
+            <h3>Install in a sub-folder</h3>
+            <p><strong>WARNING:</strong><br>
+                Since our script is based on the Laravel framework, its root folder is /public. If you're installing it in a sub-folder, you'll need to access your-domain.com/sub-folder/public. To remove /public from the URL, follow the steps in the provided video tutorial.
+            </p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/XdAYETd04iA">
+      </iframe>
+            <p><strong>TIP:</strong><br>
+                For Laravel developers looking to customize the source code in platform/core and platform/packages, delete the /vendor folder, and then run the composer install command to reinstall vendor packages.
+            </p>
+        </section>
+
+        <section id="setup-homepage">
+            <h1>Homepage</h1>
+            <h2>Setup homepage</h2>
+            <p>
+                Go to Admin -> Appearance -> Theme options (tab Page) to select a homepage.
+            </p>
+            
+            <h2>Customize homepage</h2>
+            <p>
+                Go to Admin -> Pages -> Select Homepage.
+                <img src="img/7.png" alt="Homepage Setting" width="1000" height="290">
+            </p>
+        
+            <h3>Hero Banner</h3>
+            <img src="img/8.png" alt="Homepage Setting" width="1000" height="500">
+            <p>
+                It's shortcode hero-banner in the page content.
+            </p>
+            <img src="img/9.png" alt="Homepage Setting" width="1000" height="500">
+            <p>
+                You can set the title, subtitle, image, background image, button label, button action, platform Google Play, Apple Store, and options styling.
+            </p>
+            <img src="img/10.png" alt="Homepage Setting" width="560" height="660">
+            <img src="img/11.png" alt="Homepage Setting" width="560" height="660">
+            <img src="img/12.png" alt="Homepage Setting" width="560" height="660">
+            <h3>Featured categories</h3>
+            <img src="img/13.png" alt="Homepage Setting" width="1000" height="240">
+            <p>
+                You also can custom category items in the feature-categories shortcode.
+            </p>
+            <img src="img/14.png" alt="Homepage Setting" width="1000" height="490">
+            <h3>What We Offer</h3>
+            <img src="img/15.png" alt="Homepage Setting" width="1000" height="500">
+            <p>
+                You also can custom items and more attributes in the what-we-offer shortcode.
+            </p>
+            <img src="img/16.png" alt="Homepage Setting" width="1000" height="500">
+            <p>
+                This is intro-video shortcode.
+            </p>
+            <img src="img/17.png" alt="Homepage Setting" width="1000" height="320">
+            <p>
+                You also can custom YouTube URL and more attributes in the intro-video shortcode.
+            </p>
+            <img src="img/18.png" alt="Homepage Setting" width="1000" height="500">
+            <h3>Choose to the plan</h3>
+            <img src="img/19.png" alt="Homepage Setting" width="1000" height="460">
+            <p>
+                You also can custom items and more attributes in the choose-to-the-plan shortcode.
+            </p>
+            <img src="img/20.png" alt="Homepage Setting" width="1000" height="500">
+            <h3>FAQs</h3>
+            <img src="img/21.png" alt="Homepage Setting" width="1000" height="460">
+            <p>
+                You also can custom items and more attributes in the faqs shortcode.
+            </p>
+            <img src="img/22.png" alt="Homepage Setting" width="1000" height="370">
+            <h3>Testimonials</h3>
+            <img src="img/23.png" alt="Homepage Setting" width="1000" height="340">
+            <p>
+                You also can custom items and more attributes in the testimonials shortcode.
+            </p>
+            <img src="img/24.png" alt="Homepage Setting" width="1000" height="380">
+            <h3>From our blog</h3>
+            <img src="img/25.png" alt="Homepage Setting" width="1000" height="380">
+            <p>
+                You also can custom items and more attributes in the testimonials shortcode.
+            </p>
+            <img src="img/26.png" alt="Homepage Setting" width="1000" height="380">
+            <p>
+                There are a lot of shortcodes in the theme. You can check them in the Shortcode dropdown menu in the editor.
+            </p>
+        </section>
+        
+        <section id="setup-menus">
+            <h1>Setup Menu</h1>
+            <p>
+                You can manage your menu from Admin -> Appearance -> Menus.
+            </p>
+            <img src="img/27.png" alt="Homepage Setting" width="1000" height="500">
+            <h2>Main menu</h2>
+            <img src="img/28.png" alt="Homepage Setting" width="1000" height="150">
+            <p>
+                Main menu is the menu bar on the header. You can manage menu items from Admin -> Appearance -> Menus -> click Edit button on the Main menu row.
+            </p>
+            <img src="img/29.png" alt="Homepage Setting" width="1000" height="490">
+            <h2>Footer menu</h2>
+            <img src="img/30.png" alt="Homepage Setting" width="1000" height="420">
+            <p>
+                Footer menu located on the bottom of the page. You can manage these items from Admin -> Appearance -> Menus -> click Edit button on the Footer bottom menu row.
+            </p>
+            <img src="img/31.png" alt="Homepage Setting" width="1000" height="500">
+        </section>
+        
+        <section id="setup-theme-options">
+            <h1>Theme Options</h1>
+            
+            <h2>Setup theme options</h2>
+            <p>
+                On Admin Bar -> Appearance -> Theme options.<br>
+                <img src="img/32.png" alt="Homepage Setting" width="1000" height="340"><br>
+                Or go to Admin -> Appearance -> Theme options.
+            </p>
+            <img src="img/33.png" alt="Homepage Setting" width="1000" height="500">
+            <h3>Header</h3>
+            <p>
+                Customize header.
+            </p>
+            <img src="img/34.png" alt="Homepage Setting" width="1000" height="150">
+            <ul>
+                <li>Edit Hotline. Go to Admin -> Appearance -> Theme options -> General tab.</li>
+                <img src="img/35.png" alt="Homepage Setting" width="1000" height="230">
+                <li>Edit Logo and Favicon. Go to Admin -> Appearance -> Theme options -> Logo tab.</li>
+                <img src="img/36.png" alt="Homepage Setting" width="1000" height="500">
+            </ul>
+            
+            <h3>Footer</h3>
+            <p>
+                Edit copyright text.
+            </p>
+            <img src="img/37.png" alt="Homepage Setting" width="1000" height="300">
+            <p>
+                Go to Admin -> Appearance -> Theme options -> General tab.
+            </p>
+            <img src="img/38.png" alt="Homepage Setting" width="1000" height="410">
+            <p>
+                Edit social links.
+            </p>
+            
+            <p>
+                Go to Admin -> Appearance -> Theme options -> Social links tab.
+            </p>
+            <img src="img/39.png" alt="Homepage Setting" width="1000" height="900">
+            <h3>Others</h3>
+            <p>
+                Edit Cookie consent.
+            </p>
+            <img src="img/40.png" alt="Homepage Setting" width="1000" height="180">
+            <p>
+                Go to Admin -> Appearance -> Theme options -> Cookie consent tab.
+            </p>
+            <img src="img/41.png" alt="Homepage Setting" width="1000" height="800">
+        </section>
+        
+        <section id="widgets">
+            <h1>Usage Widgets</h1>
+            <p>
+                You can customize widgets in Admin -> Appearance -> Widgets.
+            </p>
+            
+            <h2>Product List</h2>
+            <p>
+                In the left sidebar, you can see a Popular Items and Newsletter form.
+            </p>
+            <p>
+                First, this is a list of the most popular items in the shop.
+            </p>
+            <img src="img/42.png" alt="Setting Widgets" width="1000" height="500">
+            <p>
+                You can modify it in Admin -> Appearance -> Widgets -> Product list sidebar.
+            </p>
+            <img src="img/43.png" alt="Setting Widgets" width="1000" height="500">
+            <h2>Pre footer</h2>
+            <p>
+                Second, below the Popular items is the Newsletter form.
+            </p>
+            <img src="img/44.png" alt="Setting Widgets" width="1000" height="500">
+            <p>
+                You can also modify it in Pre footer sidebar like Popular items.
+            </p>
+            <img src="img/45.png" alt="Setting Widgets" width="1000" height="500">
+            <h2>Footer</h2>
+            <p>
+                Second, below the Popular items is the Menu Footer.
+            </p>
+            <img src="img/46.png" alt="Setting Widgets" width="1000" height="230">
+            <p>
+                You can also modify it in Footer menu like Popular items.
+            </p>
+            <img src="img/47.png" alt="Setting Widgets" width="1000" height="460">
+            <p>
+                Second, below the Popular items is the Contact information.
+            </p>
+            <img src="img/48.png" alt="Setting Widgets" width="1000" height="320">
+            <p>
+                You can also modify it in Footer menu like Popular items.
+            </p>
+            <img src="img/49.png" alt="Setting Widgets" width="1000" height="500">
+            <p>
+                Second, below the Popular items is the App Downloads.
+            </p>
+            <img src="img/50.png" alt="Setting Widgets" width="1000" height="320">
+            <p>
+                You can also modify it in Footer menu like Popular items.
+            </p>
+            <img src="img/51.png" alt="Setting Widgets" width="1000" height="500">
+        </section>
+        
+        <section id="custom-css-js">
+            <h1>Custom CSS/JS</h1>
+            <p>
+                Customize your site's appearance by easily adding custom CSS and JS code without modifying the theme's source code.
+            </p>
+            
+            <h2>Custom CSS</h2>
+            <p>
+                In admin panel, go to Appearance -> Custom CSS.
+            </p>
+            <img src="img/52.png" alt="Setting custom css/js" width="680" height="290">
+            
+            <h2>Custom JS</h2>
+            <p>
+                In admin panel, go to Appearance -> Custom JS.
+            </p>
+            <p>
+                Custom JS
+            </p>
+            <img src="img/53.png" alt="Setting Widgets" width="675" height="275">
+            <h2>Add your CSS/JS directly in the source code</h2>
+            <p>
+                You can add your CSS/JS directly in platform/themes/[your-theme]/partials/footer.blade.php.
+            </p>
+        </section>
+
+        <section id="translation">
+            <h1>Translation</h1>
+            <h2>Adding a new Language</h2>
+            <p>
+                Prefer go to Multi Language to read more about how to add a new language.
+            </p>
+            
+            <h2>Translating the Theme</h2>
+            <p>
+                Go to Admin -> Translation -> Theme translations.
+            </p>
+            <p>
+                Click to your language on the right side to translate it to your language.
+            </p>
+            <img src="img/54.png" alt="Setting translation" width="740" height="475">
+            
+            
+            <h2>Translating Other Elements</h2>
+            <p>
+                Go to Admin -> Translation -> Other translations.
+            </p>
+            <img src="img/55.png" alt="Setting translation" width="720" height="500">
+            <p>
+                You also can filter the translations by the group:
+            </p>
+            <img src="img/56.png" alt="Setting translation" width="700" height="300">
+        </section>
+
+        <section id="multi-language">
+            <h1>Multi-language</h1>
+            
+            <h2>Setting Up Languages</h2>
+            <p>
+                Navigate to admin panel and click to Settings -> Languages.
+            </p>
+            <img src="img/57.png" alt="Setting translation" width="1000" height="560">
+            
+            <h2>Changing the Default Language</h2>
+            <p>
+                To change the default language, you first need to add the desired language. In this example, we will add <strong>Tiếng Việt</strong> (Vietnamese) language.
+            </p>
+            <img src="img/58.png" alt="Setting translation" width="1000" height="800">
+            <p>
+                Setting the Default Language
+            </p>
+            <p>
+                Once the language is added, click on the Is default? button in the Tiếng Việt row to make it the default language.
+            </p>
+            <img src="img/59.png" alt="Setting translation" width="750" height="170">
+            <h2>Disabling Multi-language</h2>
+            <p>
+                Navigate to Plugins -> Installed Plugins and type language in the search bar. Find the Language and Language Advanced plugins and disable them to disable multi-language functionality.
+            </p>
+            <img src="img/60.png" alt="Setting translation" width="1000" height="330">
+        </section>
+
+        <section id="currencies">
+            <h1>Currencies</h1>
+            <p>
+                Currencies in the Ecommerce allow you to manage the currencies used in your online store. Here, you can set up exchange rates for different currencies, enabling customers to view prices in their preferred currency.
+            </p>
+            
+            <h2>Currency Settings</h2>
+            <p>
+                To change currency settings go to Settings -> Ecommerce -> Currencies.
+            </p>
+            <img src="img/61.png" alt="Setting currencies" width="720" height="320">
+            
+            <h2>Currency Exchange Rates</h2>
+            <h3>Automatically Updating Exchange Rates</h3>
+            <p>
+                Without the Use exchange rate from API feature, the customer needs to do their own research on the exchange rate and manually update the exchange rate in the currency settings.
+            </p>
+            <p>
+                We provide two options for automatically updating the exchange rate:
+            </p>
+            <ul>
+                <li>API Layer</li>
+                <li>Open Exchange Rates</li>
+            </ul>
+            <p>
+                In the API provider field, select the API provider you want to use and enter their API key.
+            </p>
+            <img src="img/62.png" alt="Setting currencies" width="960" height="420">
+            
+            <h3>Manually Updating Exchange Rates</h3>
+            <p>
+                If you prefer to manually update the exchange rate, select None in the API provider field and disable the Use exchange rate from API feature.
+            </p>
+            <p>
+                WARNING
+            </p>
+            <p>
+                For the default currency, the exchange rate must be 1.
+            </p>
+        </section>
+
+        <section id="location">
+            <h1>Location</h1>
+            <p>
+                It is used to change city & state field in the checkout page to dropdown list.
+            </p>
+            <img src="img/63.png" alt="Shipping information" width="810" height="690">
+           
+            
+            <h3>Active plugin</h3>
+            <p>
+                In admin panel, go to Plugins -> Installed find the Location plugin, and click Activate.
+            </p>
+            <img src="img/64.png" alt="Shipping information" width="1000" height="320">
+            
+            <h3>Add countries, states, cities</h3>
+            <p>
+                You can add manually from Admin -> Locations.
+            </p>
+            <img src="img/65.png" alt="Shipping information" width="800" height="400">
+            <p>
+                Or you can import from file CSV
+            </p>
+            <img src="img/66.png" alt="Shipping information" width="800" height="350">
+            
+            <h3>Enable location in checkout page</h3>
+            <p>
+                In admin panel, go to Settings -> Ecommerce -> Checkout and enable Load countries, states, cities from plugin location?.
+            </p>
+            <img src="img/67.png" alt="Shipping information" width="720" height="320">
+        </section>
+        
+
+        <section id="analytics">
+            <h1>Analytics</h1>
+            <p>
+                Integrate with Google Analytics
+            </p>
+            
+            <h2>Getting credentials</h2>
+            <p>
+                Navigate to Settings -> Others -> Google Analytics to find instructions for integrating with Google Analytics.
+            </p>
+            <img src="img/68.png" alt="analytics information" width="775" height="385">
+            <ul>
+                <li>Google tag ID: Follow this link to find your Google Tag ID.</li>
+                <li>Property ID: Visit this link to find your Property ID.</li>
+                <li>Service Account Credentials: Follow the instructions here to set up Service Account Credentials. After obtaining the JSON credential file, open it and copy its content to the "Service Account Credential" field.</li>
+            </ul>
+            <img src="img/69.png" alt="analytics information" width="775" height="385">
+            <p>
+                Watch this video for a visual guide.
+            </p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/2q7ufd8W8WI"> </iframe>
+            
+            <h3>Troubleshooting</h3>
+            <p>
+                Service Not Enabled Error
+            </p>
+            <p>
+                If you encounter the "Service is not enabled" error:
+            </p>
+            <img src="img/70.png" alt="analytics information" width="1000" height="470">
+            <p>
+               1. Enable Google Analytics Data API
+            </p>
+            <ol>
+                <li>Go to your Google Cloud Console, select your project, search for "APIs & Services", and enable the "Google Analytics Data API".</li>
+                <img src="img/71.png" alt="analytics information" width="1000" height="500">
+                <img src="img/72.png" alt="analytics information" width="1000" height="500">
+                <img src="img/73.png" alt="analytics information" width="1000" height="500">
+                
+            </ol>
+            <p>2. Setup Timezone and Clear Cache</p>
+            <p>
+                In admin panel, go to -> Settings -> General and set your local timezone. Then, go to Platform Administration -> Cache Management and clear your site cache.
+            </p>
+            <img src="img/74.png" alt="analytics information" width="1000" height="430">
+            <img src="img/75.png" alt="analytics information" width="920" height="320">
+            <p>
+                TIP
+            </p>
+            <p>
+                The analytics data in the Admin dashboard is displayed daily and resets every day. It is not real-time data but data from the API. Please wait until your site has data from the API.
+            </p>
+            
+        </section>
+    
+        <section id="media-setup-amazon-s3">
+            <h1>Setting Up Amazon S3 for Storage</h1>
+            <p>
+                Instruction
+            </p>
+            <p>
+                In admin panel, go to Settings -> Media to configure S3 for storage.
+            </p>
+            <img src="img/76.png" alt="Amazon s3" width="1000" height="480">
+            <p>
+                Video Tutorial
+                
+            </p>
+            <p>
+                Watch this video for a step-by-step guide:
+            </p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/FIvxmmgrHEs"> </iframe>
+        </section>
+
+        <section id="media-setup-bunnycdn">
+            <h1>Media - Setup BunnyCDN</h1>
+            <p>
+                Instruction
+            </p>
+            <p>
+                In admin panel, go to Settings -> Media to configure BunnyCDN for storage.
+            </p>
+            <img src="img/77.png" alt="Amazon s3" width="1000" height="480">
+            <p>
+                Video Tutorial
+            </p>
+            <p>
+                Watch this video for a step-by-step guide:
+            </p>
+            <iframe height="400" width="700" 
+            src="https://www.youtube.com/embed/Hlw4erp2DGk"> </iframe>
+           
+        </section>
+
+        <section id="media-setup-wasabi">
+            <h1>Media - Setup Wasabi</h1>
+            <p>
+                Instruction
+            </p>
+            <p>
+                In admin panel, go to Settings -> Media to configure Wasabi for storage.
+            </p>
+            <img src="img/78.png" alt="Amazon Wasabi" width="1000" height="530">
+            <p>
+                Steps
+            </p>
+            <ol>
+                <li>Create a new bucket in Wasabi:</li>
+            </ol>
+            <img src="img/79.jpg" alt=" Wasabi" width="1000" height="580">
+            <ol start="2">
+                <li>Change your bucket to public:</li>
+            </ol>
+            <img src="img/80.jpg" alt="Wasabi" width="1000" height="530">
+            <ol start="3">
+                <li>Get your access keys from Wasabi:</li>
+            </ol>
+            <img src="img/81.jpg" alt="Wasabi" width="1000" height="580">
+            <p>
+                Getting Access Keys
+            </p>
+            <img src="img/82.jpg" alt="Wasabi" width="1000" height="510">
+        </section>
+
+        <section id="setup-email">
+            <h1>Email</h1>
+            <p>
+                Setup Email
+            </p>
+            <p>
+                In admin panel, go to Settings -> Email to configure your email settings.
+            </p>
+            <p>
+                Support Mailgun, SendGrid, SES, Gmail, Sendmail... and other SMTP mail services. We suggest using Mailgun to send mail.
+            </p>
+            <p>
+                Make sure that you have saved settings (button Save settings at the bottom of page) before sending a test email.
+            </p>
+            
+            <img src="img/83.jpg" alt="Email" width="1000" height="520">
+            <h2>Using Gmail</h2>
+            <p>
+                Example:
+            </p>
+            <img src="img/84.jpg" alt="email" width="1000" height="930">
+            <ul>
+                <li>Mail Driver: SMTP</li>
+                <li>Mail Host: smtp.gmail.com</li>
+                <li>Mail Port: 587</li>
+                <li>Mail Encryption: tls</li>
+                <li>Mail Username: [your-gmail]</li>
+                <li>Mail Password: [password-app] (docs: <a href="https://support.google.com/mail/answer/185833?hl=en-GB">https://support.google.com/mail/answer/185833?hl=en-GB</a>)</li>
+            </ul>
+        
+            <h2>Using Mailgun</h2>
+            <p>
+                Example:
+            </p>
+            <img src="img/85.jpg" alt="email" width="1000" height="940">
+            <p>
+                The secret key must have a prefix key-. Ex: key-xxxxx.
+            </p>
+        
+            <h2>Using SendGrid</h2>
+            <p>
+                Example:
+            </p>
+            <img src="img/86.jpg" alt="email" width="1000" height="760">
+            <ul>
+                <li>Mail Host: smtp.sendgrid.net</li>
+                <li>Mail Port: 587</li>
+                <li>Username must be apikey.</li>
+            </ul>
+        
+            <h2>Using Yandex</h2>
+            <img src="img/87.jpg" alt="email" width="1000" height="930">
+            <p>
+                Edit Email template
+            </p>
+            <p>
+                Email template using HTML & and click dropdown *Variables to insert available variable. You need to know HTML and Laravel blade.
+            </p>
+            <img src="img/88.jpg" alt="email" width="1000" height="950">
+            <img src="img/89.png" alt="email" width="1000" height="700">
+        </section>
+
+        <section id="invoice-template">
+            <h1>Invoice Template</h1>
+            <p>
+                Customize the template
+            </p>
+            <p>
+                There are two options to customize the invoice template:
+            </p>
+            
+            <h2>Customize in admin panel (recommended)</h2>
+            <p>
+                Go to Settings -> Ecommerce -> Invoice Template to customize the invoice template.
+            </p>
+            <img src="img/90.png" alt="envoice" width="720" height="350">
+            
+            <h2>Customize directly file</h2>
+            <p>
+                Copy file platform/plugins/ecommerce/resources/views/invoices/template.blade.php to storage/app/invoices/template.blade.php to start customizing.
+            </p>
+            
+            <h3>Bangladesh font</h3>
+            <p>
+                To display Bangladesh text in invoice, need to use font FreeSerif.
+            </p>
+            <p>
+                Download FreeSerif.tff font from <a href="https://github.com/byrongibson/fonts/blob/master/backup/truetype.original/freefont/FreeSerif.ttf">https://github.com/byrongibson/fonts/blob/master/backup/truetype.original/freefont/FreeSerif.ttf</a>.
+            </p>
+            <p>
+                Upload FreeSerif.tff to folder /public.
+            </p>
+            <p>
+                Change in CSS:
+            </p>
+            <pre><code>
+                @font-face {
+                    font-family: FreeSerif;
+                    src: url('{{ url(' FreeSerif.ttf ') }}');
+                }
+                
+                body {
+                    font-size: 15px;
+                    font-family: FreeSerif, Arial, sans-serif !important;
+                }
+            </code></pre>
+        
+            <h3>Japanese font</h3>
+            <p>
+                Option 1: Select font M Plus Rounded 1c for invoice font in Admin -> Ecommerce -> Settings.
+            </p>
+            <p>
+                Option 2: Customize invoice template like this:
+            </p>
+            <pre><code>
+                html
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+            
+                <style>
+            
+                    body {
+                        font-size: 15px;
+                        font-family: 'M PLUS Rounded 1c', 'DejaVu Sans', Arial, sans-serif !important;
+                    }
+            
+                
+                </style>
+            </code></pre>
+            <p>
+                Option 3: Using font CyberCJK. Customize template like this:
+            </p>
+            <pre><code>
+                CSS
+                @font-face {
+                    font-family: CyberCJK;
+                    src: url("http://eclecticgeek.com/dompdf/fonts/cjk/Cybercjk.ttf") format("truetype");
+                }
+            
+                body {
+                    font-size: 15px;
+                    font-family: CyberCJK, Arial, sans-serif !important;
+                }
+            </code></pre>
+            
+            <h3>Sinhala font</h3>
+            <p>
+                Download font kaputaunicode from <a href="http://www.kaputa.com/slword/kaputaunicode.htm">http://www.kaputa.com/slword/kaputaunicode.htm</a>.
+            </p>
+            <p>
+                Upload kaputaunicode.tff to folder /public.
+            </p>
+            <p>
+                Change in CSS:
+            </p>
+            <pre><code>
+                blade
+                <style>
+                    
+                    body {
+                        font-size: 15px;
+                        font-family: kaputaunicode, Arial, sans-serif !important;
+                    }
+                </style>
+            </code></pre>
+        </section>
+        
+        <!-- Other sections follow the same pattern -->
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
