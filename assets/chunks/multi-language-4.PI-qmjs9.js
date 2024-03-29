@@ -1,1 +1,0 @@
-const s="/assets/multi-language-1.BUGLt4q8.png",t="/assets/multi-language-2.BUVYX0SI.png",a="/assets/multi-language-3.DmyHGSuD.png",g="/assets/multi-language-4.xSjl78x1.png";export{s as _,t as a,a as b,g as c};
